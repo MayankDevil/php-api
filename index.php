@@ -110,34 +110,6 @@
         | script |
         ----------
     -->
-    <script>
-
-        $(document).ready(function () {
-            
-            let url = "<?php echo $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']) . "/"; ?>"
-
-            console.log(`server : ${url}`)
-
-            $.ajax({
-                url: 'data/file.php',
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify({
-                    username: 'user',
-                    password: 'pass',
-                    data : 'new data update'
-                }),
-                success: function(response) {
-                    console.log(response);
-                },
-                error: function(err) {
-                    console.error("Request failed", err);
-                }
-            });
-
-        })
-
-    </script>
     <script src="js/script.js"></script>
     
 
